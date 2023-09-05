@@ -1,38 +1,129 @@
-.App {
-  text-align: center;
+/* App.css 或者全局樣式文件 */
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+body, html {
+  overscroll-behavior: none;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  display: flex;
+  max-width: 1265px;
+  margin: 0 auto;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sidebar-container {
+  display: flex;
+  width: 275px;
+  position: fixed; 
+  z-index: 100; 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-container {
+  flex: 1;
+  display: flex;
+  margin-left: 275px;
+  width: 990px;
+}
+.main-container-flex {
+  display: flex;
+  width: 990px;
+
+}
+
+.feed {
+  flex: 1;
+}
+.right-bar {
+  width: 350px;
+}
+
+.bottom-menu {
+  display: none;
+}
+
+
+.g-head-flex {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  border-right: 1px solid #e1e8ed;
+  border-left: 1px solid #e1e8ed;
+} 
+
+.g-head {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 566px;
+  padding: 0 16px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.7); 
+}
+.g-title {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 15px 0;
+  height: 24px;
 }
 
-.App-link {
-  color: #61dafb;
+@media (max-width: 915px) {
+
+  .main-container-flex {
+    flex: 1;
+    display: flex;
+    width: 100%;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 500px) {
+  body, html {
+    margin: 0;
+    padding: 0;
   }
-  to {
-    transform: rotate(360deg);
+  .app {
+    display: flex;
+    flex-direction: column;   
   }
+  .main-container-flex{
+    display: flex;
+    flex-direction: column; 
+  }
+  .bottom-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 50px; 
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+    border-top: 1px solid #e1e8ed;
+  }
+  .menu-icons {
+    display: flex;
+    gap: 50px;
+  }
+  .menu-icon {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    border-radius: 50%;
+  }
+
+  .menu-icon svg {
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+  }
+
 }
+
