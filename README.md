@@ -1,4 +1,4 @@
-# Building Twitter Clone with React
+# Building Media Clone with React
 
 ![twitter-clone-cy](https://github.com/Cyishen/react-twitter-clone/assets/52564123/5415f8e8-81d2-42f2-b639-0f775687de44)
 
